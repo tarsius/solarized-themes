@@ -1049,7 +1049,7 @@
             :foreground ,yellow-1fg))))
      `(magit-diff-hunk-heading-highlight
        ((t (,@(and (>= emacs-major-version 27) '(:extend t))
-            :background ,yellow-2bg
+            :background ,(solarized-color-blend yellow base02 0.1)
             :foreground ,yellow-2fg))))
      `(magit-diff-hunk-heading-selection
        ((t (,@(and (>= emacs-major-version 27) '(:extend t))
