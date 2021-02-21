@@ -1471,7 +1471,6 @@ customize the resulting theme."
      `(magit-refname-wip    ((t (:background ,base02 :foreground ,base01 :weight bold))))
      `(magit-signature-good      ((t (:foreground ,green))))
      `(magit-signature-bad       ((t (:foreground ,red))))
-     `(magit-signature-untrusted ((t (:foreground ,yellow))))
      `(magit-cherry-unmatched    ((t (:foreground ,cyan))))
      `(magit-cherry-equivalent   ((t (:foreground ,magenta))))
      `(magit-reflog-commit       ((t (:foreground ,green))))
