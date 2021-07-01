@@ -2098,6 +2098,11 @@ customize the resulting theme."
      `(transient-disabled-suffix     ((t (:foreground ,s-base3
                                           :background ,red
                                           :weight bold))))
+     `(transient-red                 ((t (:foreground ,red-d))))
+     `(transient-blue                ((t (:foreground ,blue-d))))
+     `(transient-teal                ((t (:foreground "gray80"))))
+     `(transient-higher-level
+       ((t (:underline nil :background ,(solarized-color-blend yellow-l s-base3 0.1)))))
      `(transient-nonstandard-key
        ((t (:underline nil :background ,(solarized-color-blend yellow-l s-base3 0.2)))))
      `(transient-mismatched-key
