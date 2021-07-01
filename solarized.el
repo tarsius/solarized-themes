@@ -1195,10 +1195,6 @@ customize the resulting theme."
      `(imenu-list-entry-face-2 ((,class (:inherit font-lock-variable-name-face))))
      `(imenu-list-entry-face-3 ((,class (:inherit font-lock-string-face))))
 ;;;;; info
-     `(info-title-1 ((,class (:foreground ,base1 :weight bold))))
-     `(info-title-2 ((,class (:foreground ,base1 :weight bold))))
-     `(info-title-3 ((,class (:weight bold))))
-     `(info-title-4 ((,class (:weight bold))))
      `(info-node ((,class (:foreground ,base1 :slant italic :weight bold))))
      `(info-header-node ((,class (:inherit info-node))))
      `(info-header-xref ((,class (:inherit info-xref))))
