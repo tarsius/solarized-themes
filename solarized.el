@@ -2098,15 +2098,20 @@ customize the resulting theme."
      `(transient-disabled-suffix     ((t (:foreground ,s-base3
                                           :background ,red
                                           :weight bold))))
-     `(transient-red                 ((t (:foreground ,red-d))))
-     `(transient-blue                ((t (:foreground ,blue-d))))
-     `(transient-teal                ((t (:foreground "gray80"))))
+     `(transient-red                 ((t (:foreground ,red-d   :weight bold))))
+     `(transient-blue                ((t (:foreground ,blue-d  :weight bold))))
+     `(transient-teal                ((t (:foreground "gray80" :weight bold))))
      `(transient-higher-level
-       ((t (:underline nil :background ,(solarized-color-blend yellow-l s-base3 0.1)))))
+       ((t( :underline nil
+            :background ,(solarized-color-blend yellow-l s-base3 0.1)))))
      `(transient-nonstandard-key
-       ((t (:underline nil :background ,(solarized-color-blend yellow-l s-base3 0.2)))))
+       ((t( :underline nil
+            :weight bold
+            :background ,(solarized-color-blend yellow-l s-base3 0.2)))))
      `(transient-mismatched-key
-       ((t (:underline nil :background ,(solarized-color-blend red-l s-base3 0.2)))))
+       ((t( :underline nil
+            :weight bold
+            :background ,(solarized-color-blend red-l s-base3 0.2)))))
 ;;;;; tuareg
      `(tuareg-font-lock-governing-face ((,class (:foreground ,magenta :weight bold))))
      `(tuareg-font-lock-multistage-face ((,class (:foreground ,blue :background ,base02
