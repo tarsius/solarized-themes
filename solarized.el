@@ -1397,6 +1397,7 @@ customize the resulting theme."
 ;;;;; display-line-number-mode
      `(line-number ((,class (:weight thin :underline nil :foreground ,s-fringe-fg :background ,s-fringe-bg))))
 ;;;;; lsp-ui
+     `(lsp-ui-doc-background ((,class (:background ,base02))))
      `(lsp-ui-sideline-code-action ((,class (:foreground ,yellow :weight normal))))
 ;;;;; lusty-explorer
      `(lusty-directory-face ((,class (:inherit dired-directory))))
