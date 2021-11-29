@@ -304,6 +304,7 @@ customize the resulting theme."
                                 :background ,s-mode-line-bg
                                 :box (:line-width 1 :color ,s-mode-line-bg
                                                   :style unspecified)))))
+     `(mode-line-active ((t :inherit mode-line)))
      `(mode-line-buffer-id ((,class (:foreground ,s-mode-line-buffer-id-fg :weight bold))))
      `(mode-line-inactive
        ((,class (:inverse-video unspecified
