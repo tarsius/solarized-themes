@@ -1437,7 +1437,6 @@ customize the resulting theme."
      `(magit-log-date      ((t (:foreground ,base01))))
      `(magit-log-graph     ((t (:foreground ,base1))))
 ;;;;;; sequence
-     `(magit-sequence-pick ((t (:foreground ,yellow-d))))
      `(magit-sequence-stop ((t (:foreground ,green))))
      `(magit-sequence-part ((t (:foreground ,yellow))))
      `(magit-sequence-head ((t (:foreground ,blue))))
