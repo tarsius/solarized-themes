@@ -1202,6 +1202,8 @@ customize the resulting theme."
      `(info-index-match ((,class (:inherit match))))
      `(info-menu-header ((,class (:inherit variable-pitch :weight bold))))
      `(info-menu-star ((,class (:foreground ,orange))))
+     `(info-quoted ((,class ( :background ,(solarized-color-blend s-base3 yellow-l 0.9)
+                              :inherit fixed-pitch))))
      `(info-xref ((,class (:inherit link))))
      `(info-xref-visited ((,class (:inherit (link-visited info-xref)))))
 ;;;;; info+
