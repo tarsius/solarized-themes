@@ -1138,6 +1138,10 @@ customize the resulting theme."
      `(helm-swoop-target-line-face ((,class (:foreground unspecified :background ,base02))))
      `(helm-swoop-target-line-block-face ((,class (:foreground unspecified :background ,base02))))
      `(helm-swoop-target-word-face ((,class (:foreground ,magenta :background unspecified))))
+;;;;; help
+     `(help-argument-name
+       ((,class ( :background ,(solarized-color-blend s-base3 yellow-l 0.9)
+                  :inherit fixed-pitch))))
 ;;;;; hi-lock-mode
      `(hi-yellow ((,class (:foreground ,(solarized-color-blend yellow base1 0.5)
                                        :background,(solarized-color-blend yellow base03 0.15)))))
