@@ -63,7 +63,7 @@ Related discussion: https://github.com/bbatsov/solarized-emacs/issues/158"
   :type 'boolean
   :group 'solarized)
 
-(defcustom solarized-use-variable-pitch t
+(defcustom solarized-use-variable-pitch nil
   "Use variable pitch face for some headings and titles."
   :type 'boolean
   :group 'solarized)
