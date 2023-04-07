@@ -118,11 +118,6 @@ Related discussion: https://github.com/bbatsov/solarized-emacs/issues/158"
   :type 'boolean
   :group 'solarized)
 
-(defcustom solarized-scale-outline-headlines t
-  "Whether `outline-mode' headlines should be scaled."
-  :type 'boolean
-  :group 'solarized)
-
 ;;; Utilities
 
 ;;;###autoload
@@ -1715,27 +1710,23 @@ customize the resulting theme."
      `(org-latex-and-export-specials ((,class (:foreground ,orange))))
      `(org-mode-line-clock-overrun ((,class (:inherit mode-line :background ,red))))
 ;;;;; outline
-     `(outline-1 ((,class (:inherit ,s-variable-pitch :foreground ,orange
-                                    ,@(and solarized-scale-outline-headlines
-                                           (list :height solarized-height-plus-4))))))
-     `(outline-2 ((,class (:inherit ,s-variable-pitch :foreground ,green
-                                    ,@(and solarized-scale-outline-headlines
-                                           (list :height solarized-height-plus-3))))))
-     `(outline-3 ((,class (:inherit ,s-variable-pitch :foreground ,blue
-                                    ,@(and solarized-scale-outline-headlines
-                                           (list :height solarized-height-plus-2))))))
-     `(outline-4 ((,class (:inherit ,s-variable-pitch :foreground ,yellow
-                                    ,@(when solarized-scale-outline-headlines
-                                        (list :height solarized-height-plus-1))))))
-     `(outline-5 ((,class (:inherit ,s-variable-pitch :foreground ,cyan))))
-     `(outline-6 ((,class (:inherit ,s-variable-pitch :foreground ,green))))
-     `(outline-7 ((,class (:inherit ,s-variable-pitch :foreground ,red))))
-     `(outline-8 ((,class (:inherit ,s-variable-pitch :foreground ,blue))))
+     `(outline-1 ((,class( :inherit ,s-variable-pitch
+                           :background ,(solarized-color-blend s-base3 yellow 0.9)
+                           :foreground ,orange
+                           :weight bold))))
+     `(outline-2 ((,class( :inherit outline-1
+                           :background ,s-base2
+                           :foreground ,green))))
+     `(outline-3 ((,class( :inherit outline-2 :foreground ,blue))))
+     `(outline-4 ((,class( :inherit outline-2 :foreground ,yellow))))
+     `(outline-5 ((,class( :inherit outline-2 :foreground ,cyan))))
+     `(outline-6 ((,class( :inherit outline-2 :foreground ,green))))
+     `(outline-7 ((,class( :inherit outline-2 :foreground ,red))))
+     `(outline-8 ((,class( :inherit outline-2 :foreground ,blue))))
 ;;;;; outline-minor-faces
-     `(outline-minor-0 ((,class (:weight bold :background ,s-base2))))
-     `(outline-minor-1
-       ((,class (:inherit (outline-minor-0 outline-1)
-                 :background ,(solarized-color-blend s-base3 yellow .9)))))
+     ;; outline-minor-N inherit from this and outline-N.
+     ;; Neutralize the first inherit.
+     `(outline-minor-0 ((,class ())))
 ;;;;; paren-face
      `(paren-face  ((,class (:foreground ,base01))))
 ;;;;; perspective
