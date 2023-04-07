@@ -139,7 +139,8 @@ Alpha should be a float between 0 and 1."
                     (color-name-to-rgb color1)
                     (color-name-to-rgb color2))))
 
-;;; Setup Start
+;;; Color palette
+
 (defmacro solarized-with-color-variables (variant &rest body)
   (declare (indent defun))
   `(let* ((class '((class color) (min-colors 89)))
@@ -266,7 +267,6 @@ Alpha should be a float between 0 and 1."
 
 When optional argument CHILDTHEME function is supplied it's invoked to further
 customize the resulting theme."
-;;; Color palette
   (solarized-with-color-variables variant
 ;;; Theme Faces
     (custom-theme-set-faces
