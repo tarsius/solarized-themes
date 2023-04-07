@@ -83,11 +83,6 @@ Related discussion: https://github.com/bbatsov/solarized-emacs/issues/158"
   :type 'boolean
   :group 'solarized)
 
-(defcustom solarized-high-contrast-mode-line nil
-  "Make the active/inactive mode line stand out more."
-  :type 'boolean
-  :group 'solarized)
-
 (defcustom solarized-height-minus-1 1.0
   "Font size -1."
   :type 'number
@@ -197,8 +192,8 @@ Alpha should be a float between 0 and 1."
 
           ;; Line drawing color
           ;;
-          ;; NOTE only use this for very thin lines that are hard to see using base02, in low
-          ;; color displayes base02 might be used instead
+          ;; NOTE only use this for very thin lines that are hard to see
+          ;; using base02, in low color displayes base02 might be used instead
           (s-line (if (eq variant 'light) "#cccec4" "#284b54"))
 
           ;; Light/Dark adaptive higher/lower contrast accented colors
@@ -221,6 +216,9 @@ Alpha should be a float between 0 and 1."
           (green-hc (if (eq variant 'light) green-d green-l))
           (green-lc (if (eq variant 'light) green-l green-d))
 
+          ;; Low contrast background colors
+          (lc-yellow "#f9f2d9")
+
           ;; customize based face properties
           (s-maybe-bold (if solarized-use-less-bold
                             'unspecified 'bold))
@@ -232,28 +230,6 @@ Alpha should be a float between 0 and 1."
                            base02 base03))
           (s-fringe-fg base01)
 
-          (s-header-line-fg (if solarized-high-contrast-mode-line
-                                base1 base0))
-          (s-header-line-bg (if solarized-high-contrast-mode-line
-                                base02 base03))
-          (s-header-line-underline (if solarized-high-contrast-mode-line
-                                       nil base02))
-
-          (s-mode-line-fg (if solarized-high-contrast-mode-line
-                              base03 base0))
-          (s-mode-line-bg (if solarized-high-contrast-mode-line
-                              base0 base02))
-          (s-mode-line-underline (if solarized-high-contrast-mode-line
-                                     nil s-line))
-
-          (s-mode-line-buffer-id-fg (if solarized-high-contrast-mode-line
-                                        'unspecified base1))
-          (s-mode-line-inactive-fg (if solarized-high-contrast-mode-line
-                                       base0 base01))
-          (s-mode-line-inactive-bg (if solarized-high-contrast-mode-line
-                                       base02 base03))
-          (s-mode-line-inactive-bc (if solarized-high-contrast-mode-line
-                                       base02 base02))
           )
      ,@body))
 
@@ -276,13 +252,9 @@ customize the resulting theme."
      `(escape-glyph ((,class (:foreground ,violet))))
      `(fringe ((,class (:foreground ,s-fringe-fg :background ,s-fringe-bg))))
      `(header-line
-       ((,class (:inverse-video unspecified
-                                :overline nil
-                                :underline ,s-header-line-underline
-                                :foreground ,s-header-line-fg
-                                :background ,s-header-line-bg
-                                :box (:line-width 2 :color ,s-header-line-bg
-                                                  :style unspecified)))))
+       ((,class( :underline  ,base02
+                 :foreground ,base0
+                 :background ,lc-yellow))))
      `(highlight ((,class (:background ,base02))))
      `(lazy-highlight ((,class (:foreground ,base03 :background ,yellow
                                             :weight normal))))
@@ -292,23 +264,15 @@ customize the resulting theme."
      `(menu ((,class (:foreground ,base0 :background ,base03))))
      `(minibuffer-prompt ((,class (:foreground ,base0))))
      `(mode-line
-       ((,class (:inverse-video unspecified
-                                :overline ,s-mode-line-bg
-                                :underline ,s-mode-line-underline
-                                :foreground ,s-mode-line-fg
-                                :background ,s-mode-line-bg
-                                :box (:line-width 1 :color ,s-mode-line-bg
-                                                  :style unspecified)))))
-     `(mode-line-active ((t :inherit mode-line)))
-     `(mode-line-buffer-id ((,class (:foreground ,s-mode-line-buffer-id-fg :weight bold))))
+       ((,class( :overline   ,s-line
+                 :underline  ,s-line
+                 :foreground ,base0
+                 :background ,base02))))
      `(mode-line-inactive
-       ((,class (:inverse-video unspecified
-                                :overline ,s-mode-line-inactive-bc
-                                :underline ,s-mode-line-underline
-                                :foreground ,s-mode-line-inactive-fg
-                                :background ,s-mode-line-inactive-bg
-                                :box (:line-width 1 :color ,s-mode-line-inactive-bg
-                                                  :style unspecified)))))
+       ((,class( :overline   ,s-line
+                 :underline  ,s-line
+                 :foreground ,base01
+                 :background ,lc-yellow))))
      `(region ((,class (:foreground ,base03 :background ,base1))))
      `(secondary-selection ((,class (:background ,base02))))
      `(shadow ((,class (:foreground ,base01))))
@@ -1745,18 +1709,10 @@ customize the resulting theme."
      `(popup-scroll-bar-foreground-face ((,class (:background ,base1))))
      `(popup-tip-face ((,class (:background ,base02 :foreground ,base0))))
 ;;;;; powerline
-     `(powerline-active1 ((,class ,(if solarized-high-contrast-mode-line
-                                       `(:background ,base00 :foreground ,base03)
-                                     `(:background ,base03 :foreground ,base00)))))
-     `(powerline-active2 ((,class ,(if solarized-high-contrast-mode-line
-                                       `(:background ,base01 :foreground ,base03)
-                                     `(:background ,base02 :foreground ,base00)))))
-     `(powerline-inactive1 ((,class ,(if solarized-high-contrast-mode-line
-                                         `(:background ,base03 :foreground ,base1)
-                                       `(:background ,base02 :foreground ,base01)))))
-     `(powerline-inactive2 ((,class ,(if solarized-high-contrast-mode-line
-                                         `(:background ,base02 :foreground ,base1)
-                                       `(:background ,base03 :foreground ,base01)))))
+     `(powerline-active1   ((,class (:background ,base03 :foreground ,base00))))
+     `(powerline-active2   ((,class (:background ,base02 :foreground ,base00))))
+     `(powerline-inactive1 ((,class (:background ,base02 :foreground ,base01))))
+     `(powerline-inactive2 ((,class (:background ,base03 :foreground ,base01))))
 ;;;;; pretty-mode
      `(pretty-mode-symbol-face  ((,class (:foreground ,yellow :weight normal))))
 ;;;;; prodigy
@@ -1842,8 +1798,8 @@ customize the resulting theme."
      `(solaire-line-number-face ((,class (:inherit (line-number solaire-default-face) :background ,(solarized-color-blend base02 base03 0.5)))))
      `(solaire-hl-line-face ((,class (:inherit hl-line :background ,(solarized-color-blend base02 base03 0.95)))))
      `(solaire-org-hide-face ((,class (:inherit org-hide :background ,(solarized-color-blend base02 base03 0.5)))))
-     `(solaire-mode-line-face ((,class (:inherit default :background ,s-mode-line-bg))))
-     `(solaire-mode-line-inactive-face ((,class (:inherit default :background ,s-mode-line-inactive-bg))))
+     `(solaire-mode-line-face ((,class (:inherit default :background ,base02))))
+     `(solaire-mode-line-inactive-face ((,class (:inherit default :background ,base03))))
 ;;;;; smartparens
      `(sp-pair-overlay-face ((,class (:background ,base02))))
      `(sp-wrap-overlay-face ((,class (:background ,base02))))
@@ -2277,7 +2233,7 @@ customize the resulting theme."
      `(pos-tip-foreground-color ,base1)
      `(pos-tip-background-color ,base02)
 ;;;;; smartrep
-     `(smartrep-mode-line-active-bg (solarized-color-blend ,green ,s-mode-line-bg 0.2))
+     `(smartrep-mode-line-active-bg (solarized-color-blend ,green ,base02 0.2))
 ;;;;; term
      `(term-default-fg-color ,base0) ;; @deprecated24.3
      `(term-default-bg-color ,base03) ;; @deprecated24.3
