@@ -1817,6 +1817,17 @@ customize the resulting theme."
      `(sp-show-pair-mismatch-face
        ((,class (:foreground ,base02 :background ,red
                              :weight ,s-maybe-bold))))
+;;;;; smerge
+     `(smerge-refined-added
+       ((default( :inherit smerge-refined-change
+                  ,@(and (>= emacs-major-version 27) '(:extend t))))
+        (,light-class (:background "#aaffaa"))
+        (,dark-class  (:background "#22aa22"))))
+     `(smerge-refined-removed
+       ((default( :inherit smerge-refined-change
+                  ,@(and (>= emacs-major-version 27) '(:extend t))))
+        (,light-class (:background "#ffbbbb"))
+        (,dark-class  (:background "#aa2222"))))
 ;;;;; spaceline
      `(spaceline-highlight-face ((,class (:foreground ,base1 :background ,yellow-lc))))
      `(spaceline-flycheck-error ((,class (:foreground ,red))))
