@@ -113,7 +113,7 @@ Related discussion: https://github.com/bbatsov/solarized-emacs/issues/158"
   :type 'number
   :group 'solarized)
 
-(defcustom solarized-scale-org-headlines t
+(defcustom solarized-scale-org-headlines nil
   "Whether `org-mode' headlines should be scaled."
   :type 'boolean
   :group 'solarized)
