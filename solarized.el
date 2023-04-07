@@ -634,25 +634,31 @@ customize the resulting theme."
      `(deadgrep-meta-face ((,class (:inherit font-lock-comment-face))))
      `(deadgrep-regexp-metachar-face ((,class (:inherit font-lock-constant-face))))
      `(deadgrep-search-term-face ((,class (:inherit font-lock-variable-name-face))))
-;;;;; diff
+;;;;; diff-mode
      `(diff-added   ((,class (:foreground ,green))))
      `(diff-changed ((,class (:foreground ,blue))))
      `(diff-removed ((,class (:foreground ,red))))
      `(diff-refine-added
        ((,light-class
-         (:background ,(solarized-color-blend "#ddffdd" green 0.7)))
+         ( :background ,(solarized-color-blend "#ddffdd" green 0.7)
+           ,@(and (>= emacs-major-version 27) '(:extend t))))
         (,dark-class
-         (:background ,(solarized-color-blend "#446644" green 0.7)))))
+         ( :background ,(solarized-color-blend "#446644" green 0.7)
+           ,@(and (>= emacs-major-version 27) '(:extend t))))))
      `(diff-refine-changed
        ((,light-class
-         (:background ,(solarized-color-blend "#ddddff" blue 0.7)))
+         ( :background ,(solarized-color-blend "#ddddff" blue 0.7)
+           ,@(and (>= emacs-major-version 27) '(:extend t))))
         (,dark-class
-         (:background ,(solarized-color-blend "#444466" blue 0.7)))))
+         ( :background ,(solarized-color-blend "#444466" blue 0.7)
+           ,@(and (>= emacs-major-version 27) '(:extend t))))))
      `(diff-refine-removed
        ((,light-class
-         (:background ,(solarized-color-blend "#ffdddd" red 0.7)))
+         ( :background ,(solarized-color-blend "#ffdddd" red 0.7)
+           ,@(and (>= emacs-major-version 27) '(:extend t))))
         (,dark-class
-         (:background ,(solarized-color-blend "#664444" red 0.7)))))
+         ( :background ,(solarized-color-blend "#664444" red 0.7)
+           ,@(and (>= emacs-major-version 27) '(:extend t))))))
      `(diff-header  ((,class (:background ,base03))))
      `(diff-file-header
        ((,class (:background ,base03 :foreground ,base0 :weight bold))))
