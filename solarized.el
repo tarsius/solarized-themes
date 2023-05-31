@@ -1622,6 +1622,8 @@ customize the resulting theme."
      `(org-headline-done ((,class (:foreground ,green))))
      `(org-hide ((,class (:foreground ,base03))))
      `(org-level-1 ((,class (:inherit ,s-variable-pitch :foreground ,orange
+                                      ,@(and (>= emacs-major-version 27)
+                                             (list :extend t))
                                       ,@(when solarized-scale-org-headlines
                                           (list :height solarized-height-plus-4))))))
      `(org-level-2 ((,class (:inherit ,s-variable-pitch :foreground ,green
