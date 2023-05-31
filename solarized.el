@@ -1683,7 +1683,8 @@ customize the resulting theme."
      `(outline-1 ((,class( :inherit ,s-variable-pitch
                            :background ,(solarized-color-blend s-base3 yellow 0.9)
                            :foreground ,orange
-                           :weight bold))))
+                           :weight bold
+                           ,@(and (>= emacs-major-version 27) (list :extend t))))))
      `(outline-2 ((,class( :inherit outline-1
                            :background ,s-base2
                            :foreground ,green))))
