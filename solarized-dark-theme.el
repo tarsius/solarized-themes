@@ -1,4 +1,4 @@
-;;; solarized-dark-theme.el --- Solarized Dark Theme for Emacs.
+;;; solarized-dark-theme.el --- Solarized Dark Theme for Emacs  -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2011-2019 Bozhidar Batsov
 

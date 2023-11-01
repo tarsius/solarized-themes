@@ -1,4 +1,4 @@
-;;; solarized.el --- Solarized for Emacs.
+;;; solarized.el --- Solarized for Emacs  -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2011-2019 Bozhidar Batsov
 
@@ -124,8 +124,8 @@ triplet strings (e.g. \"#ff12ec\").
 
 Alpha should be a float between 0 and 1."
   (apply 'color-rgb-to-hex
-         (-zip-with '(lambda (it other)
-                       (+ (* alpha it) (* other (- 1 alpha))))
+         (-zip-with (lambda (it other)
+                      (+ (* alpha it) (* other (- 1 alpha))))
                     (color-name-to-rgb color1)
                     (color-name-to-rgb color2))))
 

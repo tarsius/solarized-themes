@@ -1,4 +1,4 @@
-;;; solarized-light-theme.el --- Solarized Light Theme for Emacs.
+;;; solarized-light-theme.el --- Solarized Light Theme for Emacs  -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2011-2019 Bozhidar Batsov
 
