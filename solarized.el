@@ -273,7 +273,7 @@ customize the resulting theme."
                  :underline  ,s-line
                  :foreground ,base01
                  :background ,lc-yellow))))
-     `(region ((,class (:foreground ,base03 :background ,base1))))
+     `(region ((t (:background ,(solarized-color-blend yellow base02 0.1)))))
      `(secondary-selection ((,class (:background ,base02))))
      `(shadow ((,class (:foreground ,base01))))
      `(success ((,class (:foreground ,green ))))
