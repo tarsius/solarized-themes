@@ -128,6 +128,7 @@ ALPHA is a float between 0 and 1."
 (defmacro solarized-with-color-variables (variant &rest body)
   (declare (indent defun))
   `(let* ((class '((class color) (min-colors 89)))
+          (c class)
           (light-class (append '((background light)) class))
           (dark-class (append '((background dark)) class))
           (variant ,variant)
@@ -1621,28 +1622,32 @@ customize the resulting theme."
      `(org-formula ((,class (:foreground ,yellow))))
      `(org-headline-done ((,class (:foreground ,green))))
      `(org-hide ((,class (:foreground ,base03))))
-     `(org-level-1 ((,class (:inherit ,s-variable-pitch :foreground ,orange
-                                      ,@(and (>= emacs-major-version 27)
-                                             (list :extend t))
-                                      ,@(when solarized-scale-org-headlines
-                                          (list :height solarized-height-plus-4))))))
-     `(org-level-2 ((,class (:inherit ,s-variable-pitch :foreground ,green
-                                      ,@(when solarized-scale-org-headlines
-                                          (list :height solarized-height-plus-3))))))
-     `(org-level-3 ((,class (:inherit ,s-variable-pitch :foreground ,blue
-                                      ,@(when solarized-scale-org-headlines
-                                          (list :height solarized-height-plus-2))))))
-     `(org-level-4 ((,class (:inherit ,s-variable-pitch :foreground ,yellow
-                                      ,@(when solarized-scale-org-headlines
-                                          (list :height solarized-height-plus-1))))))
-     `(org-level-5 ((,class (:inherit ,s-variable-pitch
-                                      :foreground ,cyan))))
-     `(org-level-6 ((,class (:inherit ,s-variable-pitch
-                                      :foreground ,green))))
-     `(org-level-7 ((,class (:inherit ,s-variable-pitch
-                                      :foreground ,red))))
-     `(org-level-8 ((,class (:inherit ,s-variable-pitch
-                                      :foreground ,blue))))
+     `(org-level-1 ((,c( :inherit ,s-variable-pitch
+                         :foreground ,orange
+                         ,@(and (>= emacs-major-version 27)
+                                (list :extend t))
+                         ,@(and solarized-scale-org-headlines
+                                (list :height solarized-height-plus-4))))))
+     `(org-level-2 ((,c( :inherit ,s-variable-pitch
+                         :foreground ,green
+                         ,@(and solarized-scale-org-headlines
+                                (list :height solarized-height-plus-3))))))
+     `(org-level-3 ((,c( :inherit ,s-variable-pitch
+                         :foreground ,blue
+                         ,@(and solarized-scale-org-headlines
+                                (list :height solarized-height-plus-2))))))
+     `(org-level-4 ((,c( :inherit ,s-variable-pitch
+                         :foreground ,yellow
+                         ,@(and solarized-scale-org-headlines
+                                (list :height solarized-height-plus-1))))))
+     `(org-level-5 ((,c( :inherit ,s-variable-pitch
+                         :foreground ,cyan))))
+     `(org-level-6 ((,c( :inherit ,s-variable-pitch
+                         :foreground ,green))))
+     `(org-level-7 ((,c( :inherit ,s-variable-pitch
+                         :foreground ,red))))
+     `(org-level-8 ((,c( :inherit ,s-variable-pitch
+                         :foreground ,blue))))
      `(org-link ((,class (:foreground ,yellow :underline t))))
      `(org-meta-line ((,class (:foreground ,base01 :slant italic))))
      `(org-macro ((,class (:foreground ,s-base1))))
