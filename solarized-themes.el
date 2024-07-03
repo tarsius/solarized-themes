@@ -113,16 +113,15 @@ Related discussion: https://github.com/bbatsov/solarized-emacs/issues/158"
 
 ;;;###autoload
 (defun solarized-color-blend (color1 color2 alpha)
-  "Blends COLOR1 onto COLOR2 with ALPHA.
-
-COLOR1 and COLOR2 should be color names (e.g. \"white\") or RGB
-triplet strings (e.g. \"#ff12ec\").
-
-Alpha should be a float between 0 and 1."
+  "Blend COLOR1 onto COLOR2 with ALPHA.
+Return a 24-bit color rgb triplet.  COLOR1 and COLOR2 are color
+names (e.g., \"white\") or rgb triplet strings (e.g., \"#ff12ec\").
+ALPHA is a float between 0 and 1."
   (apply #'color-rgb-to-hex
-         (cl-mapcar (lambda (a b) (+ (* alpha a) (* b (- 1 alpha))))
-                    (color-name-to-rgb color1)
-                    (color-name-to-rgb color2))))
+         (nconc (cl-mapcar (lambda (a b) (+ (* alpha a) (* b (- 1 alpha))))
+                           (color-name-to-rgb color1)
+                           (color-name-to-rgb color2))
+                (list 2))))
 
 ;;; Color palette
 
@@ -834,6 +833,9 @@ customize the resulting theme."
        ((,(append '((supports :underline (:style wave))) class)
          (:underline (:style wave :color ,red) :inherit unspecified))
         (,class (:foreground ,red :weight bold :underline t))))
+;;;;; forge
+     `((forge-issue-open :background "black"))
+     `((forge-dimmed :foreground ""))
 ;;;;; form-feed
      `(form-feed-line
        ((,class (:strike-through ,s-line))))
