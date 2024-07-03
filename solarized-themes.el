@@ -2007,34 +2007,26 @@ customize the resulting theme."
      `(tooltip ((,class (:background ,yellow-lc :foreground ,yellow-hc
                                      :inherit ,s-variable-pitch))))
 ;;;;; transient
-     `(transient-heading             ((t (:foreground ,yellow  :weight bold))))
-     `(transient-key                 ((t (:foreground ,base1   :weight bold))))
-     `(transient-argument            ((t (:foreground ,cyan    :weight bold))))
-     `(transient-value               ((t (:foreground ,cyan    :weight bold))))
-     `(transient-inactive-argument   ((t (:foreground ,base01  :weight normal))))
-     `(transient-inactive-value      ((t (:foreground ,base01  :weight normal))))
-     `(transient-unreachable         ((t (:foreground ,base01  :weight normal))))
-     `(transient-unreachable-key     ((t (:foreground ,base01  :weight normal))))
-     `(transient-enabled-suffix      ((t (:foreground ,s-base3
-                                          :background ,green
-                                          :weight bold))))
-     `(transient-disabled-suffix     ((t (:foreground ,s-base3
-                                          :background ,red
-                                          :weight bold))))
-     `(transient-red                 ((t (:foreground ,red-d   :weight bold))))
-     `(transient-blue                ((t (:foreground ,blue-d  :weight bold))))
-     `(transient-teal                ((t (:foreground "gray80" :weight bold))))
+     `(transient-heading
+       ((t( :foreground ,yellow
+            :weight bold))))
+     `(transient-enabled-suffix
+       ((t( :background ,green
+            :foreground ,s-base3
+            :weight bold))))
+     `(transient-disabled-suffix
+       ((t( :background ,red
+            :foreground ,s-base3
+            :weight bold))))
      `(transient-higher-level
-       ((t( :underline nil
-            :background ,(solarized-color-blend yellow-l s-base3 0.1)))))
+       ((t( :box( :line-width ,(if (>= emacs-major-version 28) (cons -1 -1) -1)
+                  :color ,(solarized-color-blend yellow-l s-base3 0.5))))))
      `(transient-nonstandard-key
-       ((t( :underline nil
-            :weight bold
-            :background ,(solarized-color-blend yellow-l s-base3 0.2)))))
+       ((t( :box( :line-width ,(if (>= emacs-major-version 28) (cons -1 -1) -1)
+                  :color ,(solarized-color-blend yellow-l s-base3 0.5))))))
      `(transient-mismatched-key
-       ((t( :underline nil
-            :weight bold
-            :background ,(solarized-color-blend red-l s-base3 0.2)))))
+       ((t( :box( :line-width ,(if (>= emacs-major-version 28) (cons -1 -1) -1)
+                  :color ,(solarized-color-blend red-l s-base3 0.5))))))
 ;;;;; tuareg
      `(tuareg-font-lock-governing-face ((,class (:foreground ,magenta :weight bold))))
      `(tuareg-font-lock-multistage-face ((,class (:foreground ,blue :background ,base02
