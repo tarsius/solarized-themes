@@ -839,8 +839,13 @@ customize the resulting theme."
          (:underline (:style wave :color ,red) :inherit unspecified))
         (,class (:foreground ,red :weight bold :underline t))))
 ;;;;; forge
-     `((forge-issue-open :background "black"))
-     `((forge-dimmed :foreground ""))
+     `(forge-issue-open
+       ((,c :foreground "#586e75")))
+     `(forge-issue-completed
+       ((,c :foreground ,(solarized-color-blend "#93a1a1" "#fdf6e3" 0.8))))
+     `(forge-issue-unplanned
+       ((,c :foreground ,(solarized-color-blend "#93a1a1" "#fdf6e3" 0.8)
+            :strike-through t)))
 ;;;;; form-feed
      `(form-feed-line
        ((,class (:strike-through ,s-line))))
