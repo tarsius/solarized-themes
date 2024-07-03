@@ -1518,10 +1518,12 @@ customize the resulting theme."
      `(nav-face-hfile ((,class (:foreground ,red))))
 ;;;;; nav-flash
      ;; `(nav-flash-face ((,class (:background ,base02))))
-     `(nav-flash-face ((,light-class (:foreground ,(solarized-color-blend yellow base1 0.2)
-                                      :background ,(solarized-color-blend yellow base03 0.2)))
-                       (,dark-class (:foreground ,(solarized-color-blend cyan base1 0.1)
-                                     :background ,(solarized-color-blend cyan base03 0.3)))))
+     `(nav-flash-face ((,light-class
+                        ( :foreground ,(solarized-color-blend yellow base1 0.2)
+                          :background ,(solarized-color-blend yellow base03 0.2)))
+                       (,dark-class
+                        ( :foreground ,(solarized-color-blend cyan base1 0.1)
+                          :background ,(solarized-color-blend cyan base03 0.3)))))
 ;;;;; navi2ch
      `(navi2ch-list-category-face ((,class (:foreground ,blue ))))
      `(navi2ch-list-add-board-name-face ((,class (:foreground ,yellow))))
@@ -2235,7 +2237,7 @@ customize the resulting theme."
      `(highlight-symbol-foreground-color ,base1)
      `(highlight-symbol-colors
        (mapcar (lambda (color) (solarized-color-blend color ,base03 0.25))
-              '(,yellow ,cyan ,red ,violet ,green ,orange ,blue)))
+               '(,yellow ,cyan ,red ,violet ,green ,orange ,blue)))
 ;;;;; highlight-tail
      `(highlight-tail-colors
        '((,base02 . 0)(,green-lc . 20)(,cyan-lc . 30)(,blue-lc . 50)
@@ -2287,10 +2289,10 @@ customize the resulting theme."
                      ,cyan-d ,cyan
                      ,base0 ,base00))
 ;;;;; xterm-color
-     `(xterm-color-names [,base02 ,red ,green ,yellow
-                                  ,blue ,magenta ,cyan ,base2])
-     `(xterm-color-names-bright [,base03 ,orange ,base01 ,base00
-                                         ,base0 ,violet ,base1 ,base3]))
+     `(xterm-color-names [ ,base02 ,red ,green ,yellow
+                           ,blue ,magenta ,cyan ,base2])
+     `(xterm-color-names-bright [ ,base03 ,orange ,base01 ,base00
+                                  ,base0 ,violet ,base1 ,base3]))
 ;;; Setup End
     (when childtheme
       (funcall childtheme))
