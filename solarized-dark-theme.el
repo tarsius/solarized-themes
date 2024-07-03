@@ -1,6 +1,8 @@
-;;; solarized-dark-theme.el --- Solarized Dark Theme for Emacs  -*- lexical-binding:t -*-
+;;; solarized-dark-theme.el --- Dark Solarized theme  -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2011-2019 Bozhidar Batsov
+;; Copyright (C) 2012-2019 Thomas Frössman
+;; Copyright (C) 2014-2024 Jonas Bernoulli
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -16,9 +18,9 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-;;
-;; The dark variant of the solarized theme.
-;;
+
+;; The dark variant of the Solarized theme.
+
 ;;; Code:
 
 (require 'solarized-themes)

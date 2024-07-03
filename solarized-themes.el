@@ -1,13 +1,18 @@
-;;; solarized-themes.el --- Solarized for Emacs  -*- lexical-binding:t -*-
+;;; solarized-themes.el --- Solarized themes  -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2011-2019 Bozhidar Batsov
+;; Copyright (C) 2012-2019 Thomas Frössman
+;; Copyright (C) 2014-2024 Jonas Bernoulli
 
-;; Author: Bozhidar Batsov <bozhidar@batsov.com>
-;; Author: Thomas Frössman <thomasf@jossystem.se>
-;; URL: http://github.com/bbatsov/solarized-emacs
-;; Version: 1.3.0
+;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
+;;   Thomas Frössman <thomasf@jossystem.se>
+;; Maintainer: Jonas Bernoulli <emacs.solarized-themes@jonas.bernoulli.dev>
+;; `--> of this fork
+
+;; Homepage: https://github.com/tarsius/solarized-themes
+;; Upstream: https://github.com/bbatsov/solarized-emacs
+
 ;; Package-Requires: ((emacs "26"))
-;; Keywords: themes, solarized
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -23,22 +28,14 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-;;
-;; A port of Solarized to Emacs.
-;;
-;;; Installation:
-;;
-;;   Drop the `solarized-theme.el` somewhere in your `load-path` and
-;; the two themes in a folder that is on `custom-theme-load-path'
-;; and enjoy!
-;;
-;; Don't forget that the theme requires Emacs 24.
-;;
-;;; Credits
-;;
+
+;; A fork of a port of Solarized to Emacs.
+
+;;; Credits:
+
 ;; Ethan Schoonover created the original theme for vim on such this port
 ;; is based.
-;;
+
 ;;; Code:
 
 (require 'color)
