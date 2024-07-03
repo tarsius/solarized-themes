@@ -260,12 +260,16 @@ customize the resulting theme."
      `(minibuffer-prompt ((,class (:foreground ,base0))))
      `(mode-line
        ((,class( :overline   ,s-line
-                 :underline  ,s-line
+                 :underline  ,(if (>= emacs-major-version 29)
+                                  `(:color ,s-line :position t)
+                                color)
                  :foreground ,base0
                  :background ,base02))))
      `(mode-line-inactive
        ((,class( :overline   ,s-line
-                 :underline  ,s-line
+                 :underline  ,(if (>= emacs-major-version 29)
+                                  `(:color ,s-line :position t)
+                                color)
                  :foreground ,base01
                  :background ,lc-yellow))))
      `(region ((t (:background ,(solarized-color-blend yellow base02 0.1)))))
