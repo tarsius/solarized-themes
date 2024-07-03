@@ -21,7 +21,7 @@
 ;;
 ;;; Code:
 
-(require 'solarized)
+(require 'solarized-themes)
 
 (deftheme solarized-light "The light variant of the Solarized colour theme")
 

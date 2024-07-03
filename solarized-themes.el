@@ -1,4 +1,4 @@
-;;; solarized.el --- Solarized for Emacs  -*- lexical-binding:t -*-
+;;; solarized-themes.el --- Solarized for Emacs  -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2011-2019 Bozhidar Batsov
 
@@ -6,7 +6,7 @@
 ;; Author: Thomas Frössman <thomasf@jossystem.se>
 ;; URL: http://github.com/bbatsov/solarized-emacs
 ;; Version: 1.3.0
-;; Package-Requires: ((emacs "24") (dash "2.16"))
+;; Package-Requires: ((emacs "24.1") (cl-lib "0.5") (dash "2.16.0"))
 ;; Keywords: themes, solarized
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -2309,7 +2309,7 @@ customize the resulting theme."
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide 'solarized)
+(provide 'solarized-themes)
 
 ;; Local Variables:
 ;; no-byte-compile: t
@@ -2317,4 +2317,4 @@ customize the resulting theme."
 ;; indent-tabs-mode: nil
 ;; fill-column: 95
 ;; End:
-;;; solarized.el ends here
+;;; solarized-themes.el ends here
