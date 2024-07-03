@@ -1696,7 +1696,8 @@ customize the resulting theme."
                            ,@(and (>= emacs-major-version 27) (list :extend t))))))
      `(outline-2 ((,class( :inherit outline-1
                            :background ,s-base2
-                           :foreground ,green))))
+                           :foreground ,green
+                           ,@(and (>= emacs-major-version 27) (list :extend t))))))
      `(outline-3 ((,class( :inherit outline-2 :foreground ,blue))))
      `(outline-4 ((,class( :inherit outline-2 :foreground ,yellow))))
      `(outline-5 ((,class( :inherit outline-2 :foreground ,cyan))))
