@@ -36,7 +36,6 @@
               js2-mode
               haskell-mode
               undo-tree
-              dash
               s
               f))
       (refreshed nil))

@@ -6,7 +6,7 @@
 ;; Author: Thomas Frössman <thomasf@jossystem.se>
 ;; URL: http://github.com/bbatsov/solarized-emacs
 ;; Version: 1.3.0
-;; Package-Requires: ((emacs "24.1") (cl-lib "0.5") (dash "2.16.0"))
+;; Package-Requires: ((emacs "24.1") (cl-lib "0.5"))
 ;; Keywords: themes, solarized
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -41,7 +41,6 @@
 ;;
 ;;; Code:
 
-(require 'dash)
 (require 'color)
 
 ;;; Options
@@ -123,9 +122,8 @@ COLOR1 and COLOR2 should be color names (e.g. \"white\") or RGB
 triplet strings (e.g. \"#ff12ec\").
 
 Alpha should be a float between 0 and 1."
-  (apply 'color-rgb-to-hex
-         (-zip-with (lambda (it other)
-                      (+ (* alpha it) (* other (- 1 alpha))))
+  (apply #'color-rgb-to-hex
+         (cl-mapcar (lambda (a b) (+ (* alpha a) (* b (- 1 alpha))))
                     (color-name-to-rgb color1)
                     (color-name-to-rgb color2))))
 
@@ -2239,7 +2237,7 @@ customize the resulting theme."
 ;;;;; highlight-symbol
      `(highlight-symbol-foreground-color ,base1)
      `(highlight-symbol-colors
-       (--map (solarized-color-blend it ,base03 0.25)
+       (mapcar (lambda (color) (solarized-color-blend color ,base03 0.25))
               '(,yellow ,cyan ,red ,violet ,green ,orange ,blue)))
 ;;;;; highlight-tail
      `(highlight-tail-colors

@@ -1,7 +1,7 @@
 ;;; emacs-visual-test.el ---
 
 (load-file "init.el")
-(require 'dash)
+
 (setq header-line-format "header line content")
 
 (defconst screenshots-directory
