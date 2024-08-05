@@ -144,7 +144,7 @@ Arguments sent with these signals:
    The model class.
 
 **instance**
-   The actual instance being procceed
+   The actual instance being proceed
 
 **name**
    Transition name

@@ -14,7 +14,7 @@ being as close as possible to writing written text on paper with a few tools
 like markers and coloured pencils at hand to highlight **exceptional
 circumstances**.
 
-This is not meant to be a strict guide but it can probably be follwed in most
+This is not meant to be a strict guide but it can probably be followed in most
 situations.
 
 ### Upstream Solarized palette usage documentation
@@ -76,7 +76,7 @@ Some specific color information:
 
 ### Using colors that are not in the original solarized theme
 
-(TODO: document the lc/hc colors and possibly some of the blending thats used at places)
+(TODO: document the lc/hc colors and possibly some of the blending that's used at places)
 
 - If possible, just don't do it.
 - One common usage is when there is a need to add yet another overlay where
