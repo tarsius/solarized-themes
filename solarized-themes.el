@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2011-2019 Bozhidar Batsov
 ;; Copyright (C) 2012-2019 Thomas Frössman
-;; Copyright (C) 2014-2024 Jonas Bernoulli
+;; Copyright (C) 2014-2025 Jonas Bernoulli
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;;   Thomas Frössman <thomasf@jossystem.se>
@@ -1323,11 +1323,11 @@ customize the resulting theme."
 ;;;;;; headings and diffs
      `(magit-section-highlight           ((t (:background ,base02))))
      `(magit-section-heading             ((t (:foreground ,yellow :weight bold))))
-     `(magit-section-heading-selection   ((t (:foreground ,orange :weight bold))))
+     `(magit-section-heading-selection
+       ((t (:background ,(solarized-color-blend blue base03 0.1)))))
      `(magit-diff-file-heading           ((t (:weight bold))))
      `(magit-diff-file-heading-highlight ((t (:background ,base02))))
-     `(magit-diff-file-heading-selection ((t (:background ,base02
-                                                          :foreground ,orange))))
+     `(magit-diff-file-heading-selection ((t (:foreground ,orange))))
      `(magit-diff-hunk-heading
        ((t (:background ,(solarized-color-blend yellow base03 0.1)))))
      `(magit-diff-hunk-heading-highlight
