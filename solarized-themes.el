@@ -396,7 +396,7 @@ customize the resulting theme."
 ;;;;; wid-edit
      `(widget-field ((,class (:background ,base02))))
 ;;;;; font lock
-     `(elisp-shorthand-font-lock-face ((,class (:foreground ,yellow-d))))
+     `(elisp-shorthand-font-lock-face ((,class (:slant italic))))
      `(font-lock-builtin-face ((,class (:foreground ,base0 :weight ,s-maybe-bold
                                                     :slant ,s-maybe-italic))))
      `(font-lock-comment-delimiter-face
