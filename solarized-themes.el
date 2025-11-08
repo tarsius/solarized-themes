@@ -1401,7 +1401,10 @@ customize the resulting theme."
      `(markdown-bold-face ((,class (:inherit bold))))
      `(markdown-code-face ((,class (:inherit fixed-pitch :foreground ,base01
                                              :background unspecified))))
-     `(markdown-comment-face ((,class (:foreground ,base01 :strike-through t))))
+     `(markdown-comment-face
+       ((t( :foreground ,base01
+            :background ,(solarized-color-blend yellow base03 0.1)
+            :extend t))))
      `(markdown-footnote-face ((,class (:inherit default))))
      `(markdown-header-delimiter-face ((,class (:foreground ,base01))))
      `(markdown-header-face ((,class (:foreground ,blue))))
