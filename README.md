@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This fork is mostly intended for my own use.
+
 # A fork of a port of Solarized to Emacs
 
 This is a fork of [`solarized-theme`][e], which in turn is a port of the
@@ -7,9 +10,6 @@ and Thomas Frössman.
 
 At least two more implementations for Emacs exist, the [original port][o]
 by Greg Pfeil and [another][a] by Steve Purcell.
-
-> [!IMPORTANT]
-> This fork is mostly intended for my own use.
 
 I forked because I disagreed with the [decision][y] to massively refactor,
 in order to define many more non-solarized themes within the same package,
