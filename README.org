@@ -1,0 +1,23 @@
+#+begin_quote
+[!IMPORTANT]
+This fork is mostly intended for my own use.
+#+end_quote
+
+* A fork of a port of Solarized to Emacs
+
+This is a fork of [[https://github.com/bbatsov/solarized-emacs/][solarized-theme]], which in turn is a port of the
+[[https://ethanschoonover.com/solarized/][original]] implementation for Vim.  The Vim implementation was developed
+by Ethan Schoonover, the upstream Emacs implementation by Bozhidar
+Batsov and Thomas Frössman.
+
+At least two more implementations for Emacs exist, the [[https://github.com/sellout/emacs-color-theme-solarized/][original port]]
+by Greg Pfeil and [[https://github.com/purcell/color-theme-sanityinc-solarized/][another]] by Steve Purcell.
+
+I forked because I disagreed with the [[https://github.com/bbatsov/solarized-emacs/issues/354/][decision]] to massively refactor,
+in order to define many more non-solarized themes within the same
+package, a move that immediately broke the actual Solarized themes.
+No doubt that has been fixed by now, but in the turmoil that followed,
+I also realized that Solarized was good enough as-is, and that I was
+no longer benefiting from third-party contributions.  It seems more
+productive to just tweak it a bit myself, if and when I see the need,
+and otherwise skip the churn.
