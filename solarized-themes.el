@@ -226,7 +226,9 @@ ALPHA is a float between 0 and 1."
           (s-fringe-fg base01)
 
           )
-     ,@body))
+     (cl-letf (((symbol-function 'blend)
+                (symbol-function #'solarized-color-blend)))
+       ,@body)))
 
 (defun create-solarized-theme (variant theme-name &optional childtheme)
   "Create a VARIANT of the theme named THEME-NAME.
