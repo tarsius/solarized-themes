@@ -1325,26 +1325,22 @@ customize the resulting theme."
      `(macrostep-expansion-highlight-face ((,class (:background ,base02))))
 ;;;;; magit
 ;;;;;; headings and diffs
-     `(magit-section-highlight           ((t (:background ,base02))))
-     `(magit-section-heading             ((t (:foreground ,yellow :weight bold))))
-     `(magit-section-heading-selection
-       ((t (:background ,(solarized-color-blend blue base03 0.1)))))
-     `(magit-diff-file-heading           ((t (:weight bold))))
-     `(magit-diff-file-heading-highlight ((t (:background ,base02))))
-     `(magit-diff-file-heading-selection ((t (:foreground ,orange))))
-     `(magit-diff-hunk-heading
-       ((t (:background ,(solarized-color-blend yellow base03 0.1)))))
-     `(magit-diff-hunk-heading-highlight
-       ((t (:background ,(solarized-color-blend yellow base02 0.1)))))
-     `(magit-diff-hunk-heading-selection
-       ((t (:background ,(solarized-color-blend yellow base02 0.1)
-                        :foreground ,orange
-                        :weight bold))))
-     `(magit-diff-lines-heading          ((t (:background ,orange
-                                                          :foreground ,base3))))
-     `(magit-diff-context-highlight      ((t (:background ,base02))))
-     `(magit-diffstat-added              ((t (:foreground ,green))))
-     `(magit-diffstat-removed            ((t (:foreground ,red))))
+     `(magit-section-highlight           ((t( :background ,base02))))
+     `(magit-section-heading             ((t( :foreground ,yellow :weight bold))))
+     `(magit-section-heading-selection   ((t( :background ,(blend blue base03 0.1)))))
+     `(magit-diff-file-heading           ((t( :weight bold))))
+     `(magit-diff-file-heading-highlight ((t( :background ,base02))))
+     `(magit-diff-file-heading-selection ((t( :foreground ,orange))))
+     `(magit-diff-hunk-heading           ((t( :background ,(blend yellow base03 0.1)))))
+     `(magit-diff-hunk-heading-highlight ((t( :background ,(blend yellow base02 0.1)))))
+     `(magit-diff-hunk-heading-selection ((t( :background ,(blend yellow base02 0.1)
+                                              :foreground ,orange
+                                              :weight bold))))
+     `(magit-diff-lines-heading          ((t( :background ,orange
+                                              :foreground ,base3))))
+     `(magit-diff-context-highlight      ((t( :background ,base02))))
+     `(magit-diffstat-added              ((t( :foreground ,green))))
+     `(magit-diffstat-removed            ((t( :foreground ,red))))
 ;;;;;; process
      `(magit-process-ok    ((t (:foreground ,green :weight bold))))
      `(magit-process-ng    ((t (:foreground ,red   :weight bold))))
