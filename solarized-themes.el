@@ -663,10 +663,10 @@ customize the resulting theme."
      `(diff-file-header
        ((,class (:background ,base03 :foreground ,base0 :weight bold))))
 ;;;;; diff-hl
-     `(diff-hl-change ((,class (:background ,blue-lc  :foreground ,blue-hc))))
-     `(diff-hl-delete ((,class (:background ,red-lc  :foreground ,red-hc))))
-     `(diff-hl-insert ((,class (:background ,green-lc  :foreground ,green-hc))))
-     `(diff-hl-unknown ((,class (:background ,cyan-lc   :foreground ,cyan-hc))))
+     `(diff-hl-change  ((,c (:background ,blue-lc  :foreground ,blue-hc))))
+     `(diff-hl-delete  ((,c (:background ,red-lc   :foreground ,red-hc))))
+     `(diff-hl-insert  ((,c (:background ,green-lc :foreground ,green-hc))))
+     `(diff-hl-unknown ((,c (:background ,cyan-lc  :foreground ,cyan-hc))))
 ;;;;; ediff
      `(ediff-fine-diff-A ((,class (:background ,orange-lc))))
      `(ediff-fine-diff-B ((,class (:background ,green-lc))))
