@@ -1333,11 +1333,12 @@ customize the resulting theme."
      `(magit-diff-file-heading-selection ((t( :foreground ,orange))))
      `(magit-diff-hunk-heading           ((t( :background ,(blend yellow base03 0.1)))))
      `(magit-diff-hunk-heading-highlight ((t( :background ,(blend yellow base02 0.1)))))
-     `(magit-diff-hunk-heading-selection ((t( :background ,(blend yellow base02 0.1)
-                                              :foreground ,orange
+     `(magit-diff-hunk-heading-selection ((t( :background ,(blend blue base03 0.1)
                                               :weight bold))))
-     `(magit-diff-lines-heading          ((t( :background ,orange
-                                              :foreground ,base3))))
+     `(magit-diff-lines-heading          ((t( :background ,(blend blue base03 0.1)
+                                              :weight bold))))
+     `(magit-diff-lines-boundary         ((t( :background ,(blend blue base03 0.8)
+                                              :foreground ,(blend blue base03 0.8)))))
      `(magit-diff-context-highlight      ((t( :background ,base02))))
      `(magit-diffstat-added              ((t( :foreground ,green))))
      `(magit-diffstat-removed            ((t( :foreground ,red))))
