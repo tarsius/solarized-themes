@@ -668,24 +668,16 @@ customize the resulting theme."
      `(diff-hl-insert  ((,c (:background ,green-lc :foreground ,green-hc))))
      `(diff-hl-unknown ((,c (:background ,cyan-lc  :foreground ,cyan-hc))))
 ;;;;; ediff
-     `(ediff-fine-diff-A ((,class (:background ,orange-lc))))
-     `(ediff-fine-diff-B ((,class (:background ,green-lc))))
-     `(ediff-fine-diff-C ((,class (:background ,yellow-lc))))
-
-     `(ediff-current-diff-C ((,class (:background ,blue-lc))))
-
-     `(ediff-even-diff-A ((,class (:background ,base01
-                                               :foreground ,base3 ))))
-     `(ediff-odd-diff-A ((,class (:background ,base01
-                                              :foreground ,base03 ))))
-     `(ediff-even-diff-B ((,class (:background ,base01
-                                               :foreground ,base03 ))))
-     `(ediff-odd-diff-B ((,class (:background ,base01
-                                              :foreground ,base03 ))))
-     `(ediff-even-diff-C ((,class (:background ,base01
-                                               :foreground ,base0 ))))
-     `(ediff-odd-diff-C ((,class (:background ,base01
-                                              :foreground ,base03 ))))
+     `(ediff-current-diff-C        ((,c (:background ,blue-lc))))
+     `(ediff-fine-diff-A           ((,c (:background ,orange-lc))))
+     `(ediff-fine-diff-B           ((,c (:background ,green-lc))))
+     `(ediff-fine-diff-C           ((,c (:background ,yellow-lc))))
+     `(ediff-even-diff-A           ((,c (:background ,base01 :foreground ,base3))))
+     `(ediff-even-diff-B           ((,c (:background ,base01 :foreground ,base03))))
+     `(ediff-even-diff-C           ((,c (:background ,base01 :foreground ,base0))))
+     `(ediff-odd-diff-A            ((,c (:background ,base01 :foreground ,base03))))
+     `(ediff-odd-diff-B            ((,c (:background ,base01 :foreground ,base03))))
+     `(ediff-odd-diff-C            ((,c (:background ,base01 :foreground ,base03))))
 ;;;;; edts
      `(edts-face-error-line
        ((,(append '((supports :underline (:style line))) light-class)
