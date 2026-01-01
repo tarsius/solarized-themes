@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2011-2019 Bozhidar Batsov
 ;; Copyright (C) 2012-2019 Thomas Frössman
-;; Copyright (C) 2014-2025 Jonas Bernoulli
+;; Copyright (C) 2014-2026 Jonas Bernoulli
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;;   Thomas Frössman <thomasf@jossystem.se>

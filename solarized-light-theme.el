@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2011-2019 Bozhidar Batsov
 ;; Copyright (C) 2012-2019 Thomas Frössman
-;; Copyright (C) 2014-2024 Jonas Bernoulli
+;; Copyright (C) 2014-2024-2026 Jonas Bernoulli
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
