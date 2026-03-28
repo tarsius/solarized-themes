@@ -188,7 +188,7 @@ ALPHA is a float between 0 and 1."
           ;; Line drawing color
           ;;
           ;; NOTE only use this for very thin lines that are hard to see
-          ;; using base02, in low color displayes base02 might be used instead
+          ;; using base02, in low color displays base02 might be used instead
           (s-line (if (eq variant 'light) "#cccec4" "#284b54"))
 
           ;; Light/Dark adaptive higher/lower contrast accented colors
@@ -1906,7 +1906,7 @@ customize the resulting theme."
      `(sx-question-mode-closed-reason ((,class (:inherit sx-question-mode-title :box (:line-width 2 :color ,yellow)))))
      ;; TODO: sx-question-mode-content-faceexposes a general problem that's hard to deal with,
      ;; if base02 is used as bg some things are not visible enough.. It might be a good idea to
-     ;; introduce yet another special color that goes a little further towards netural gray and
+     ;; introduce yet another special color that goes a little further towards neutral gray and
      ;; ensures readability as a bg for all solarized faces. If it's possible, that is.
      `(sx-question-mode-content-face ((,class (:background unspecified))))
      `(sx-question-mode-date ((,class (:inherit font-lock-string-face))))
