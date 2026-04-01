@@ -7,11 +7,13 @@
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;;   Thomas Frössman <thomasf@jossystem.se>
 ;; Maintainer: Jonas Bernoulli <emacs.solarized-themes@jonas.bernoulli.dev>
-;; `--> of this fork
+;;   `--> of this fork
 
 ;; Homepage: https://github.com/tarsius/solarized-themes
 ;; Upstream: https://github.com/bbatsov/solarized-emacs
 
+;; Package-Version: 1.4.0
+;;   `--> stay below 2.0.0, the first upstream release after the schism
 ;; Package-Requires: ((emacs "26.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
