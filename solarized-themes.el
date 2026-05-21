@@ -14,7 +14,7 @@
 
 ;; Package-Version: 1.4.0
 ;;   `--> stay below 2.0.0, the first upstream release after the schism
-;; Package-Requires: ((emacs "26.1"))
+;; Package-Requires: ((emacs "28.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -662,25 +662,19 @@ customize the resulting theme."
      `(diff-removed ((,class (:foreground ,red))))
      `(diff-refine-added
        ((,light-class
-         ( :background ,(solarized-color-blend "#ddffdd" green 0.7)
-           ,@(and (>= emacs-major-version 27) '(:extend t))))
+         (:background ,(solarized-color-blend "#ddffdd" green 0.7) :extend t)))
         (,dark-class
-         ( :background ,(solarized-color-blend "#446644" green 0.7)
-           ,@(and (>= emacs-major-version 27) '(:extend t))))))
+         (:background ,(solarized-color-blend "#446644" green 0.7) :extend t)))
      `(diff-refine-changed
        ((,light-class
-         ( :background ,(solarized-color-blend "#ddddff" blue 0.7)
-           ,@(and (>= emacs-major-version 27) '(:extend t))))
+         (:background ,(solarized-color-blend "#ddddff" blue 0.7) :extend t)))
         (,dark-class
-         ( :background ,(solarized-color-blend "#444466" blue 0.7)
-           ,@(and (>= emacs-major-version 27) '(:extend t))))))
+         (:background ,(solarized-color-blend "#444466" blue 0.7) :extend t)))
      `(diff-refine-removed
        ((,light-class
-         ( :background ,(solarized-color-blend "#ffdddd" red 0.7)
-           ,@(and (>= emacs-major-version 27) '(:extend t))))
+         (:background ,(solarized-color-blend "#ffdddd" red 0.7) :extend t))
         (,dark-class
-         ( :background ,(solarized-color-blend "#664444" red 0.7)
-           ,@(and (>= emacs-major-version 27) '(:extend t))))))
+         (:background ,(solarized-color-blend "#664444" red 0.7) :extend t))))
      `(diff-header  ((,class (:background ,base03))))
      `(diff-file-header
        ((,class (:background ,base03 :foreground ,base0 :weight bold))))
@@ -1658,8 +1652,7 @@ customize the resulting theme."
      `(org-level-1 ((,c( :inherit ,s-variable-pitch
                          :background ,(solarized-color-blend s-base3 yellow 0.9)
                          :foreground ,orange
-                         ,@(and (>= emacs-major-version 27)
-                                (list :extend t))
+                         :extend t
                          ,@(and solarized-scale-org-headlines
                                 (list :height solarized-height-plus-4))))))
      `(org-level-2 ((,c( :inherit ,s-variable-pitch
@@ -1726,11 +1719,11 @@ customize the resulting theme."
                            :background ,(solarized-color-blend s-base3 yellow 0.9)
                            :foreground ,orange
                            :weight bold
-                           ,@(and (>= emacs-major-version 27) (list :extend t))))))
+                           :extend t))))
      `(outline-2 ((,class( :inherit outline-1
                            :background ,s-base2
                            :foreground ,green
-                           ,@(and (>= emacs-major-version 27) (list :extend t))))))
+                           :extend t))))
      `(outline-3 ((,class( :inherit outline-2 :foreground ,blue))))
      `(outline-4 ((,class( :inherit outline-2 :foreground ,yellow))))
      `(outline-5 ((,class( :inherit outline-2 :foreground ,cyan))))
@@ -1863,13 +1856,11 @@ customize the resulting theme."
                              :weight ,s-maybe-bold))))
 ;;;;; smerge
      `(smerge-refined-added
-       ((default( :inherit smerge-refined-change
-                  ,@(and (>= emacs-major-version 27) '(:extend t))))
+       ((default      (:inherit smerge-refined-change :extend t))
         (,light-class (:background "#aaffaa"))
         (,dark-class  (:background "#22aa22"))))
      `(smerge-refined-removed
-       ((default( :inherit smerge-refined-change
-                  ,@(and (>= emacs-major-version 27) '(:extend t))))
+       ((default      (:inherit smerge-refined-change :extend t))
         (,light-class (:background "#ffbbbb"))
         (,dark-class  (:background "#aa2222"))))
 ;;;;; spaceline
@@ -2043,13 +2034,13 @@ customize the resulting theme."
             :foreground ,s-base3
             :weight bold))))
      `(transient-higher-level
-       ((t( :box( :line-width ,(if (>= emacs-major-version 28) (cons -1 -1) -1)
+       ((t( :box( :line-width (-1 . -1)
                   :color ,(solarized-color-blend yellow-l s-base3 0.5))))))
      `(transient-nonstandard-key
-       ((t( :box( :line-width ,(if (>= emacs-major-version 28) (cons -1 -1) -1)
+       ((t( :box( :line-width (-1 . -1)
                   :color ,(solarized-color-blend yellow-l s-base3 0.5))))))
      `(transient-mismatched-key
-       ((t( :box( :line-width ,(if (>= emacs-major-version 28) (cons -1 -1) -1)
+       ((t( :box( :line-width (-1 . -1)
                   :color ,(solarized-color-blend red-l s-base3 0.5))))))
 ;;;;; tuareg
      `(tuareg-font-lock-governing-face ((,class (:foreground ,magenta :weight bold))))
