@@ -662,14 +662,14 @@ customize the resulting theme."
      `(diff-removed ((,class (:foreground ,red))))
      `(diff-refine-added
        ((,light-class
-         (:background ,(solarized-color-blend "#ddffdd" green 0.7) :extend t)))
+         (:background ,(solarized-color-blend "#ddffdd" green 0.7) :extend t))
         (,dark-class
-         (:background ,(solarized-color-blend "#446644" green 0.7) :extend t)))
+         (:background ,(solarized-color-blend "#446644" green 0.7) :extend t))))
      `(diff-refine-changed
        ((,light-class
-         (:background ,(solarized-color-blend "#ddddff" blue 0.7) :extend t)))
+         (:background ,(solarized-color-blend "#ddddff" blue 0.7) :extend t))
         (,dark-class
-         (:background ,(solarized-color-blend "#444466" blue 0.7) :extend t)))
+         (:background ,(solarized-color-blend "#444466" blue 0.7) :extend t))))
      `(diff-refine-removed
        ((,light-class
          (:background ,(solarized-color-blend "#ffdddd" red 0.7) :extend t))
