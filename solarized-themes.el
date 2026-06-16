@@ -2315,10 +2315,10 @@ customize the resulting theme."
                      ,cyan-d ,cyan
                      ,base0 ,base00))
 ;;;;; xterm-color
-     `(xterm-color-names [ ,base02 ,red ,green ,yellow
-                           ,blue ,magenta ,cyan ,base2])
-     `(xterm-color-names-bright [ ,base03 ,orange ,base01 ,base00
-                                  ,base0 ,violet ,base1 ,base3]))
+     `(xterm-color-names [,base02 ,red ,green ,yellow
+                          ,blue ,magenta ,cyan ,base2])
+     `(xterm-color-names-bright [,base03 ,orange ,base01 ,base00
+                                 ,base0 ,violet ,base1 ,base3]))
 ;;; Setup End
     (when childtheme
       (funcall childtheme))
