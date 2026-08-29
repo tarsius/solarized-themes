@@ -1066,30 +1066,6 @@ customize the resulting theme."
      `(help-argument-name
        ((,class ( :background ,(solarized-color-blend s-base3 yellow-l 0.9)
                   :inherit fixed-pitch))))
-;;;;; hi-lock-mode
-     `(hi-yellow ((,class (:foreground ,(solarized-color-blend yellow base1 0.5)
-                                       :background,(solarized-color-blend yellow base03 0.15)))))
-     `(hi-pink ((,class (:foreground ,(solarized-color-blend magenta base1 0.5)
-                                     :background,(solarized-color-blend magenta base03 0.15)))))
-     `(hi-green ((,class (:foreground ,(solarized-color-blend green base1 0.5)
-                                      :background,(solarized-color-blend green base03 0.15)))))
-     `(hi-blue ((,class (:foreground ,(solarized-color-blend blue base1 0.5)
-                                     :background,(solarized-color-blend blue base03 0.15)))))
-     `(hi-black-b ((,class (:foreground ,base1
-                                        :background ,base03
-                                        :weight bold))))
-     `(hi-blue-b ((,class (:weight bold
-                                   :foreground ,(solarized-color-blend cyan base1 0.7)
-                                   :background ,(solarized-color-blend cyan base03 0.2)))))
-     `(hi-green-b ((,class (:weight bold
-                                    :foreground ,(solarized-color-blend green base1 0.7)
-                                    :background ,(solarized-color-blend green base03 0.2)))))
-     `(hi-red-b ((,class (:weight bold
-                                  :foreground ,(solarized-color-blend red base1 0.7)
-                                  :background ,(solarized-color-blend red base03 0.2)))))
-     `(hi-black-hb ((,class (:weight bold
-                                     :foreground ,base1
-                                     :background ,base02))))
 ;;;;; highlight-changes
      `(highlight-changes ((,class (:foreground ,orange))))
      `(highlight-changes-delete ((,class (:foreground ,red :underline t))))
@@ -2255,6 +2231,9 @@ customize the resulting theme."
      `(nrepl-message-colors
        '(,red ,orange ,yellow ,green-d ,green-l
               ,blue-d ,cyan ,magenta ,violet))
+;;;;; hi-lock
+     `(hi-lock-faces
+       '("hi-yellow" "hi-pink" "hi-green" "hi-blue" "hi-salmon" "hi-aquamarine"))
 ;;;;; highlight-changes
      `(highlight-changes-colors '(,magenta ,violet))
 ;;;;; highlight-parentheses
