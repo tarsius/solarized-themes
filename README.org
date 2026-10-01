@@ -21,3 +21,6 @@ I also realized that Solarized was good enough as-is, and that I was
 no longer benefiting from third-party contributions.  It seems more
 productive to just tweak it a bit myself, if and when I see the need,
 and otherwise skip the churn.
+
+#+html: <br><br>
+#+html: <a href="https://emacsair.me/human"><img alt="human made" src="https://emacsair.me/assets/badges/human.svg"/></a>
