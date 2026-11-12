@@ -1066,30 +1066,8 @@ customize the resulting theme."
      `(help-argument-name
        ((,class ( :background ,(solarized-color-blend s-base3 yellow-l 0.9)
                   :inherit fixed-pitch))))
-;;;;; hi-lock-mode
-     `(hi-yellow ((,class (:foreground ,(solarized-color-blend yellow base1 0.5)
-                                       :background,(solarized-color-blend yellow base03 0.15)))))
-     `(hi-pink ((,class (:foreground ,(solarized-color-blend magenta base1 0.5)
-                                     :background,(solarized-color-blend magenta base03 0.15)))))
-     `(hi-green ((,class (:foreground ,(solarized-color-blend green base1 0.5)
-                                      :background,(solarized-color-blend green base03 0.15)))))
-     `(hi-blue ((,class (:foreground ,(solarized-color-blend blue base1 0.5)
-                                     :background,(solarized-color-blend blue base03 0.15)))))
-     `(hi-black-b ((,class (:foreground ,base1
-                                        :background ,base03
-                                        :weight bold))))
-     `(hi-blue-b ((,class (:weight bold
-                                   :foreground ,(solarized-color-blend cyan base1 0.7)
-                                   :background ,(solarized-color-blend cyan base03 0.2)))))
-     `(hi-green-b ((,class (:weight bold
-                                    :foreground ,(solarized-color-blend green base1 0.7)
-                                    :background ,(solarized-color-blend green base03 0.2)))))
-     `(hi-red-b ((,class (:weight bold
-                                  :foreground ,(solarized-color-blend red base1 0.7)
-                                  :background ,(solarized-color-blend red base03 0.2)))))
-     `(hi-black-hb ((,class (:weight bold
-                                     :foreground ,base1
-                                     :background ,base02))))
+;;;;; hi-lock
+     `(hi-lock-yellow ((t(:background ,(solarized-color-blend yellow-l base03 0.3)))))
 ;;;;; highlight-changes
      `(highlight-changes ((,class (:foreground ,orange))))
      `(highlight-changes-delete ((,class (:foreground ,red :underline t))))
@@ -2255,6 +2233,10 @@ customize the resulting theme."
      `(nrepl-message-colors
        '(,red ,orange ,yellow ,green-d ,green-l
               ,blue-d ,cyan ,magenta ,violet))
+;;;;; hi-lock
+     `(hi-lock-face-defaults
+       '(,@(cl-loop for d from 1 to 16 collect (format "hi-lock-%02d" d))
+         "hi-yellow"))
 ;;;;; highlight-changes
      `(highlight-changes-colors '(,magenta ,violet))
 ;;;;; highlight-parentheses
@@ -2319,6 +2301,24 @@ customize the resulting theme."
                           ,blue ,magenta ,cyan ,base2])
      `(xterm-color-names-bright [,base03 ,orange ,base01 ,base00
                                  ,base0 ,violet ,base1 ,base3]))
+;;; Additional faces
+;;;;; hi-lock
+    (defface hi-lock-01 `((t(:background ,(solarized-color-blend "yellow"  base03 0.3)))) "" :group 'hi-lock-faces)
+    (defface hi-lock-02 `((t(:background ,(solarized-color-blend "magenta" base03 0.3)))) "" :group 'hi-lock-faces)
+    (defface hi-lock-03 `((t(:background ,(solarized-color-blend "violet"  base03 0.3)))) "" :group 'hi-lock-faces)
+    (defface hi-lock-04 `((t(:background ,(solarized-color-blend "blue"    base03 0.3)))) "" :group 'hi-lock-faces)
+    (defface hi-lock-05 `((t(:background ,(solarized-color-blend "cyan"    base03 0.3)))) "" :group 'hi-lock-faces)
+    (defface hi-lock-06 `((t(:background ,(solarized-color-blend "orange"  base03 0.3)))) "" :group 'hi-lock-faces)
+    (defface hi-lock-07 `((t(:background ,(solarized-color-blend "red"     base03 0.3)))) "" :group 'hi-lock-faces)
+    (defface hi-lock-08 `((t(:background ,(solarized-color-blend "green"   base03 0.3)))) "" :group 'hi-lock-faces)
+    (defface hi-lock-09 `((t(:box(:color ,(solarized-color-blend "yellow"  base03 0.9) :line-width (-3 . -3)) :background ,base02))) "" :group 'hi-lock-faces)
+    (defface hi-lock-10 `((t(:box(:color ,(solarized-color-blend "magenta" base03 0.9) :line-width (-3 . -3)) :background ,base02))) "" :group 'hi-lock-faces)
+    (defface hi-lock-11 `((t(:box(:color ,(solarized-color-blend "violet"  base03 0.9) :line-width (-3 . -3)) :background ,base02))) "" :group 'hi-lock-faces)
+    (defface hi-lock-12 `((t(:box(:color ,(solarized-color-blend "blue"    base03 0.9) :line-width (-3 . -3)) :background ,base02))) "" :group 'hi-lock-faces)
+    (defface hi-lock-13 `((t(:box(:color ,(solarized-color-blend "cyan"    base03 0.9) :line-width (-3 . -3)) :background ,base02))) "" :group 'hi-lock-faces)
+    (defface hi-lock-14 `((t(:box(:color ,(solarized-color-blend "orange"  base03 0.9) :line-width (-3 . -3)) :background ,base02))) "" :group 'hi-lock-faces)
+    (defface hi-lock-15 `((t(:box(:color ,(solarized-color-blend "red"     base03 0.9) :line-width (-3 . -3)) :background ,base02))) "" :group 'hi-lock-faces)
+    (defface hi-lock-16 `((t(:box(:color ,(solarized-color-blend "green"   base03 0.9) :line-width (-3 . -3)) :background ,base02))) "" :group 'hi-lock-faces)
 ;;; Setup End
     (when childtheme
       (funcall childtheme))
